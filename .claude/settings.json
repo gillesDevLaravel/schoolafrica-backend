@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(php -r \":*)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(''''php req:'''', d[''''require''''][''''php'''']\\)\")",
+      "Bash(php -r \"echo shell_exec\\(''where composer 2>&1''\\);\")"
+    ]
+  }
+}

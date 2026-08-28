@@ -1,0 +1,46 @@
+<?php
+
+return [
+    'situe_a' => "Sis à",
+    'tel' => "Tel:",
+    'cnps' => "CNPS:",
+
+    'nom_et_prenom' => "Nom et Prénoms",
+
+    'date_de_naissance' => "Date de Naissance",
+    'date_d\'entree' => "Date d'entrée:",
+    'anciennete' => "Ancienneté:",
+    'emploi' => "Emploi:",
+    'num_cnps' => "N°CNPS",
+    'cat' => "CAT",
+    'ech' => "ECH",
+    'bulletin_de_paie' => "BULLETIN DE PAIE",
+    'periode' => "Période du:",
+    'salaire_brut' => "SALAIRE BRUT",
+    'salaire_net_a_payer' => "SALAIRE NET A PAYER",
+    'charges_salariales' => "CHARGES SALARIALES",
+    'charges_salariale' => "Charges Salariales",
+    'charges_patronales' => "CHARGES PATRONALES",
+    'total_retenues' => "TOTAL RETENUES",
+    'total_autres_gains' => "TOTAL AUTRES GAINS",
+    'total_charges_sociales' => "Total charges sociales",
+    'total_charges_fiscale' => "Total charges fiscales",
+    'texte_de_prevension' => "(Afin de pouvoir bénéficier de vos avantages Sociaux, nous vous conseillons de bien conserver tous vos bulletins de paie)",
+    'net_imposable' => "Net Imposable",
+    'net_a_percevoir' => "Net à percevoir",
+    'signature_employe' => "Signature de l'employé",
+    'signature_employeur' => "Signature de l'employeur",
+    'gains' => "Gain",
+    'base' => "Base",
+    'coeff' => "Coeff",
+    'Rubrique' => "Rubrique",
+    'Retenue' => "Retenues",
+    'fiscales' => "Fiscales",
+    'sociales' => "Sociales",
+    'Elements_de_gain' => "ELEMENTS DE GAIN",
+    'retenues' => "RETENUES",
+    't_ch_patr' => "T.Ch.Patr.",
+    'autres_gains' => "AUTRES GAINS",
+    'periode_du'=> "période du"
+
+];

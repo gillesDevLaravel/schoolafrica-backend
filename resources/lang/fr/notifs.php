@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'absence_title' => "Absence au cours",
+    'absence_desc' => ":nom absent(e) au cours de :cours_libelle le :date à :heure",
+    'event_title' => "Evènement",
+    'homework_title' => "Devoir de :matter_name pour la classe de:classe_name",
+    'homework_desc' => "Devoir de :matter_name",
+    'rating_title' => "Note de :matter_name",
+    'rating_desc' => "L'élève :student_name de la classe :classe_name a obtenu la note de :note en :matter_name pour la séquence :num_sequence.",
+    'task_title' => "Nouvelle Tâche",
+    'note_frais_title' => "Nouvelle note de frais",
+    'note_frais_traitment_title' => "Votre note de frais a été traitée",
+    'sanction_title' => "Sanction concernant :student_name par :author",
+    'observation_title' => "Observation concernant :student_name par l'Enseignant(e) :teacher_name",
+    'observation_answer_title' => "Reponse a l'observation concernant :student_name par :user_name",
+    'pensionuser_title' => ":montant_total XAF de pension versée",
+    'pensionuser_desc' => "Paiement de pension d'un montant de :montant_total XAF pour :student_name",
+    'feeuser_title' => ":montant_total XAF de frais de :frais versés",
+    'feeuser_desc' => "Versement d'une somme de :montant_total XAF de frais de :frais pour :student_name",
+    'req_title' => "Requête soumise par :student_name",
+    'req_up_title' => "Requête traitée",
+    'permission_user_request' => " Permission en attente d'approbation",
+    'permission_user_response' => "Notification Pending Approval",
+];

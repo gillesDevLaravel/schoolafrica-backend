@@ -1,0 +1,4 @@
+- utiliser les Jobs pour le calcul de notes
+- possibilité aussi d'avoir une table qui stocke les moyennes (pour ne pas recalculer ça à chaque fois)
+- utiliser les Jobs pour le calcul de notes
+- possibilité aussi d'avoir une table qui stocke les moyennes (pour ne pas recalculer ça à chaque fois)
