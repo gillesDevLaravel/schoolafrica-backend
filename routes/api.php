@@ -71,6 +71,7 @@ use App\Http\Controllers\TypeInvoiceController;
 use App\Http\Controllers\TypeOfRecipeController;
 use App\Http\Controllers\TypeRequeteController;
 use App\Http\Controllers\WarningController;
+use App\Http\Controllers\TutorialController;
 use App\Models\User;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Dompdf\Dompdf;
@@ -1054,6 +1055,14 @@ Route::group(['middleware' => ['auth:sanctum', 'setLocale']],function() {
     Route::post("memos/trash", [MemoController::class, "trash"]);
     Route::post("memos/restore", [MemoController::class, "restore"]);
     Route::post("memos/delete", [MemoController::class, "destroy"]);
+
+    Route::post("tutorialsall", [TutorialController::class, "index"]);
+    Route::post("tutorials", [TutorialController::class, "create"]);
+    Route::get("tutorials/{tutorial}", [TutorialController::class, "show"]);
+    Route::put("tutorials/{tutorial}", [TutorialController::class, "update"]);
+    Route::post("tutorials/trash", [TutorialController::class, "trash"]);
+    Route::post("tutorials/restore", [TutorialController::class, "restore"]);
+    Route::post("tutorials/delete", [TutorialController::class, "destroy"]);
 
     Route::post('semestres', [SemestreController::class, 'store']);
     Route::get('semestres/{id}', [SemestreController::class, 'show']);
