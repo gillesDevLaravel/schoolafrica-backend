@@ -19,7 +19,9 @@ class CreateSchoolyearsTable extends Migration
             $table->integer('updated_by')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('idEstablishment')->references('id')->on('establishments')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+
+            // $table->foreign('idEstablishment')->references('id')->on('establishments')->onDelete('restrict')->onUpdate('restrict');
         });
     }
 

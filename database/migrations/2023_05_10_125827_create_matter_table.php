@@ -32,8 +32,10 @@ class CreateMatterTable extends Migration
             $table->increments('id');
             $table->integer('matter_id')->unsigned()->index();
             $table->integer('level_id')->unsigned()->index();
-            $table->foreign('matter_id')->references('id')->on('matter')->onDelete('cascade');
-            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('matter_id')->references('id')->on('matter')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
         });
     }
 

@@ -25,8 +25,8 @@ class AddIdTrancheToModuleTable extends Migration
      */
     public function down()
     {
-        Schema::table('module', function (Blueprint $table) {
-            //
+        Schema::table('modules', function (Blueprint $table) {
+            $table->dropColumn('idTranche');
         });
     }
 }

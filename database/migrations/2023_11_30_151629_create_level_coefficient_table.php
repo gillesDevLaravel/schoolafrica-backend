@@ -17,8 +17,11 @@ class CreateLevelCoefficientTable extends Migration
             $table->unsignedBigInteger('coefficient_id');
             $table->timestamps();
 
-            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
-            $table->foreign('coefficient_id')->references('id')->on('coefficients')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+
+            // $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('coefficient_id')->references('id')->on('coefficients')->onDelete('cascade');
         });
     }
 

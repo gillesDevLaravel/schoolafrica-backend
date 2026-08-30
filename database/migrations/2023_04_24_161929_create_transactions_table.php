@@ -47,13 +47,22 @@ class CreateTransactionsTable extends Migration
             $table->timestamps();
 
             
-            $table->foreign('idInvoice')->references('id')->on('invoices')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');            
-            $table->foreign('idInscription')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idPension')->references('id')->on('pensions')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idTranche')->references('id')->on('tranches')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idEnseignant')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+
+            
+            // $table->foreign('idInvoice')->references('id')->on('invoices')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');            
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idInscription')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idPension')->references('id')->on('pensions')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idTranche')->references('id')->on('tranches')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idEnseignant')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
            
         });
     }

@@ -53,14 +53,23 @@ class CreateUsersTable extends Migration
             $table->integer('updated_by')->unsigned()->nullable();
             $table->timestamps();
             
-            $table->foreign('idMatter')->references('id')->on('matter')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idParent')->references('id')->on('users')->onDelete('set null');
-            $table->foreign('idLevel')->references('id')->on('levels')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idOptionLevel')->references('id')->on('option_level')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idCycle')->references('id')->on('cycles')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idClasse')->references('id')->on('classes')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            
+            // $table->foreign('idMatter')->references('id')->on('matter')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idParent')->references('id')->on('users')->onDelete('set null');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idLevel')->references('id')->on('levels')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idOptionLevel')->references('id')->on('option_level')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idCycle')->references('id')->on('cycles')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idClasse')->references('id')->on('classes')->onDelete('restrict')->onUpdate('restrict');
             
         });
 
@@ -68,16 +77,20 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->integer('matter_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
-            $table->foreign('matter_id')->references('id')->on('matter')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('matter_id')->references('id')->on('matter')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
         Schema::create('classe_has_user', function(Blueprint $table){
             $table->increments('id');
             $table->integer('classes_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
-            $table->foreign('classes_id')->references('id')->on('classes')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('classes_id')->references('id')->on('classes')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

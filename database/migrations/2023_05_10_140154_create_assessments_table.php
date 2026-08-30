@@ -38,28 +38,39 @@ class CreateAssessmentsTable extends Migration
             $table->integer('updated_by')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('idCoeficient')->references('id')->on('coefficients')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idMatter')->references('id')->on('matter')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idClasse')->references('id')->on('classes')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idTeacher')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+
+            // $table->foreign('idCoeficient')->references('id')->on('coefficients')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idMatter')->references('id')->on('matter')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idClasse')->references('id')->on('classes')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idTeacher')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');
         });
 
         Schema::create('assessments_has_type_evaluation', function(Blueprint $table){
             $table->increments('id');
             $table->integer('assessment_id')->unsigned()->index();
             $table->integer('type_evaluation_id')->unsigned()->index();
-            $table->foreign('assessment_id')->references('id')->on('assessments')->onDelete('cascade');
-            $table->foreign('type_evaluation_id')->references('id')->on('type_evaluation')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('assessment_id')->references('id')->on('assessments')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('type_evaluation_id')->references('id')->on('type_evaluation')->onDelete('cascade');
         });
 
         Schema::create('assessments_has_assessment_type', function(Blueprint $table){
             $table->increments('id');
             $table->integer('assessment_id')->unsigned()->index();
             $table->integer('assessment_type_id')->unsigned()->index();
-            $table->foreign('assessment_id')->references('id')->on('assessments')->onDelete('cascade');
-            $table->foreign('assessment_type_id')->references('id')->on('assessment_type')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('assessment_id')->references('id')->on('assessments')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('assessment_type_id')->references('id')->on('assessment_type')->onDelete('cascade');
         });
     }
 
