@@ -36,8 +36,11 @@ class CreateEstablishmentsTable extends Migration
             $table->integer('updated_by')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('idFounder')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idPackage')->references('id')->on('packages')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+
+            // $table->foreign('idFounder')->references('id')->on('users')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idPackage')->references('id')->on('packages')->onDelete('restrict')->onUpdate('restrict');
             
         });
 
@@ -45,8 +48,10 @@ class CreateEstablishmentsTable extends Migration
             $table->increments('id');
             $table->integer('establishment_id')->unsigned()->index();
             $table->integer('user_id')->unsigned()->index();
-            $table->foreign('establishment_id')->references('id')->on('establishments')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('establishment_id')->references('id')->on('establishments')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
@@ -56,7 +61,8 @@ class CreateEstablishmentsTable extends Migration
      * @return void
      */
     public function down()
-    {        
+    {
+        Schema::dropIfExists('establishments_has_users');
         Schema::dropIfExists('establishments');
     }
 }

@@ -37,6 +37,6 @@ class CreatePackagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('forfaits');
+        Schema::dropIfExists('packages');
     }
 }

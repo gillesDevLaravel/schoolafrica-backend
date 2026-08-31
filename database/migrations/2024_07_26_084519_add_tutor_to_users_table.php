@@ -14,7 +14,7 @@ class AddTutorToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('mother')->nullable()->after('deleted');
+            $table->string('mother')->nullable()->after('idCycle');
             $table->string('tutor')->nullable()->after('mother');
             $table->string('phone_2')->nullable()->after('tutor');
             $table->string('phone_3')->nullable()->after('phone_2');

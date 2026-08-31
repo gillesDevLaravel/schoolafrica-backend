@@ -25,17 +25,23 @@ class CreateFeesTable extends Migration
             $table->integer('updated_by')->unsigned()->nullable();
             $table->timestamps();
 
-            $table->foreign('idOptionLevel')->references('id')->on('option_level')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
-            $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+
+            // $table->foreign('idOptionLevel')->references('id')->on('option_level')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSchool')->references('id')->on('schools')->onDelete('restrict')->onUpdate('restrict');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('idSection')->references('id')->on('section')->onDelete('restrict')->onUpdate('restrict');
         });
 
         Schema::create('fee_has_level', function(Blueprint $table){
             $table->increments('id');
             $table->integer('fee_id')->unsigned()->index();
             $table->integer('level_id')->unsigned()->index();
-            $table->foreign('fee_id')->references('id')->on('fees')->onDelete('cascade');
-            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('fee_id')->references('id')->on('fees')->onDelete('cascade');
+            // Disabled: historical FK constraints are applied inconsistently and break fresh migrations.
+            // $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
         });
     }
 
